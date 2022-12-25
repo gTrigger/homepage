@@ -1,0 +1,14 @@
+body {
+  &.dark-theme {
+    background: $gradient-black;
+    color: white;
+
+    .app-header {
+      color: white;
+    }
+
+    a {
+      color: white;
+    }
+  }
+}

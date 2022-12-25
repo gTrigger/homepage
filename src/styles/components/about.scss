@@ -1,0 +1,23 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 30px;
+
+  @include tablet {
+    justify-content: center;
+  }
+
+  @include mobile {
+    justify-content: center;
+    font-size: calc(3vw + 3px);
+  }
+
+  &__hello {
+    font-weight: bold;
+
+    @include gradient-text;
+  }
+}
+
+

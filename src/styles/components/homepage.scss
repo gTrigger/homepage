@@ -1,0 +1,12 @@
+.homepage {
+  @include graphic-background;
+
+  font-size: 25px;
+  letter-spacing: 1px;
+  line-height: 25px;
+
+  &-section {
+    min-height: 100vh;
+    margin: auto 12vw;
+  }
+}

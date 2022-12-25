@@ -1,0 +1,83 @@
+[
+  {
+    "id": "1",
+    "title": "Mobilithek",
+    "class": "mobilithek",
+    "description": "Platform for Federal Ministry for Digital and Transport of Germany (BMDV) that offers access to open mobility data and B2B data exchange.",
+    "url": "https://mobilithek.info/",
+    "github": null,
+    "technologies": ["Vue", "TypeScript", "Jest", "Groovy"]
+  },
+  {
+    "id": "2",
+    "title": "Data Intelligence Hub",
+    "class": "dih",
+    "description": "Platform for the secure exchange, processing and analysis of data, which meets all the strict requirements of International Data Spaces Association (IDSA).",
+    "url": "https://portal.dih.telekom.net/marketplace",
+    "github": null,
+    "technologies": ["Vue", "TypeScript", "Jest"]
+  },
+  {
+    "id": "3",
+    "title": "Portfolio",
+    "class": "portfolio",
+    "description": "My own portfolio website \uD83D\uDC49\uD83D\uDC48 Built using React as a practice project during learning process.",
+    "url": "https://gtrigger-weather-forecast.netlify.app/",
+    "github": "https://github.com/gTrigger/WeatherForecast",
+    "technologies": ["React", "JavaScript"]
+  },
+  {
+    "id": "4",
+    "title": "Weather forecast",
+    "class": "forecast",
+    "description": "Small project to check weather in any city around the world. Built using Vuetify.",
+    "url": "https://gtrigger-weather-forecast.netlify.app/",
+    "github": "https://github.com/gTrigger/WeatherForecast",
+    "technologies": ["Vue", "TypeScript", "Vuetify"]
+  },
+  {
+    "id": "5",
+    "title": "Github Userboard",
+    "class": "userboard",
+    "description": "Top github users list. Built using Github open API.",
+    "url": "https://gtrigger-github-userboard.netlify.app/",
+    "github": "https://github.com/gTrigger/GithubUserboard",
+    "technologies": ["Vue", "JavaScript"]
+  },
+  {
+    "id": "6",
+    "title": "Center of Reactive Programming",
+    "class": "crp",
+    "description": "Marketing platform for Center of Reactive Programming. Previous and less fancy version, to be more precise \uD83C\uDF1A",
+    "url": "http://www.crplab.ru/",
+    "github": null,
+    "technologies": ["Vue", "JavaScript"]
+  },
+  {
+    "id": "7",
+    "title": "CML-Bench",
+    "class": "bench",
+    "description": "Platform for data simulation, analysis and management in the different fields of engineering.",
+    "url": "https://cml-bench.ru/",
+    "github": null,
+    "technologies": ["Backbone", "Marionette", "JavaScript"]
+  },
+  {
+    "id": "8",
+    "title": "Molot",
+    "class": "molot",
+    "description": "Marketing platform for Molot forge.",
+    "url": null,
+    "github": null,
+    "technologies": ["Vue", "JavaScript"]
+  },
+  {
+    "id": "9",
+    "title": "Puma",
+    "class": "puma",
+    "description": "Network access control system which provides control of workstation traffic.",
+    "url": null,
+    "github": null,
+    "technologies": ["Vue", "JavaScript", "WebSockets"]
+  }
+]
