@@ -1,31 +1,40 @@
-import github from 'assets/images/icons/github.svg'
-import linkedIn from 'assets/images/icons/linkedin.svg'
-import telegram from 'assets/images/icons/telegram.svg'
-import {useRef} from "react";
+import { ReactComponent as LinkedInIcon } from 'assets/images/icons/linkedin.svg';
+import { ReactComponent as TelegramIcon } from 'assets/images/icons/telegram.svg';
+import { ReactComponent as GithubIcon } from 'assets/images/icons/github.svg';
 
 const Contacts = () => {
-    const contactsRef = useRef(null);
+    function copyToClipboard() {
+        const tooltip = document.getElementsByClassName('contacts__tooltip')[0];
+        navigator.clipboard.writeText('gtrigger@yandex.ru');
+        tooltip.innerHTML = 'Copied';
+
+        setTimeout(() => {
+            tooltip.innerHTML = 'Copy to clipboard'
+        }, 20 * 1000)
+    }
 
     return (
-        <div className="contacts homepage-section" ref={contactsRef}>
+        <div className="contacts homepage-section">
             <p className="contacts__text">
                 Let's be in touch!
             </p>
+            <p className="contacts__text">
+                Contact me via
+                <span className="contacts__email" onClick={() => copyToClipboard() }>
+                    <span className="contacts__tooltip">Copy to clipboard</span>
+                    &nbsp;email&nbsp;
+                </span>
+                or any following socials:
+            </p>
             <div className="contacts__socials">
-                <div className="social-logo">
-                    <img src={linkedIn}
-                         onClick={() => window.open('https://www.linkedin.com/in/anefimova/')}
-                         alt="linkedIn"/>
+                <div className="social-logo linkedin" onClick={() => window.open('https://www.linkedin.com/in/anefimova/')}>
+                    <LinkedInIcon title="linkedIn" height="40" width="40"/>
                 </div>
-                <div className="social-logo">
-                    <img src={telegram}
-                     onClick={() => window.open('https://t.me/gTrigger/')}
-                     alt="telegram"/>
+                <div className="social-logo telegram" onClick={() => window.open('https://t.me/gTrigger/')}>
+                    <TelegramIcon title="telegram" height="40" width="40"/>
                 </div>
-                <div className="social-logo">
-                    <img src={github}
-                     onClick={() => window.open('https://t.me/gTrigger')}
-                     alt="github"/>
+                <div className="social-logo github" onClick={() => window.open('https://github.com/gTrigger')}>
+                    <GithubIcon title="github" height="40" width="40"/>
                 </div>
             </div>
         </div>

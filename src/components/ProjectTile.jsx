@@ -1,4 +1,4 @@
-import link from "assets/images/icons/link.svg";
+import { ReactComponent as LinkIcon } from 'assets/images/icons/link.svg';
 
 const ProjectTile = ({project}) => {
     return (
@@ -19,16 +19,14 @@ const ProjectTile = ({project}) => {
                         project.url && <div className="link"
                                             onClick={() => window.open(project.url)}>
                             <span>Website</span>
-                            <img src={link}
-                                 alt="link-icon"/>
+                            <LinkIcon title="link" height="18" width="18"/>
                         </div>
                     }
                     {
                         project.github && <div className="link"
                                                onClick={() => window.open(project.github)}>
                             <span>Github repo</span>
-                            <img src={link}
-                                 alt="link-icon"/>
+                            <LinkIcon title="link" height="18" width="18"/>
                         </div>
                     }
                 </div>

@@ -1,44 +1,40 @@
 .projects {
   padding-top: 80px;
-}
 
-.projects__list {
-  display: grid;
-  place-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
+  &__list {
+    display: grid;
+    place-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
 
-  @include tablet {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-  @include mobile {
-    grid-template-columns: 1fr;
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 .project-tile {
-  @include gradient-border;
-
   display: flex;
   flex-direction: column;
-  width: 300px;
-  margin: 15px;
-  border-radius: 10px;
-  padding: 15px;
-  box-sizing: border-box;
-  min-height: 350px;
-  font-size: 16px;
   position: relative;
+  box-sizing: border-box;
+  width: 300px;
+  min-height: 350px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
   border-width: 2px;
-  background: $gradient-black;
+  font-size: $font-size-xsmall;
 
   &__title {
-    margin-bottom: 15px;
     height: auto;
-    font-size: 20px;
-    font-weight: bold;
+    margin-bottom: 15px;
+    font-weight: $font-weight-bold;
   }
 
   &__description {
@@ -50,14 +46,9 @@
 
     .link {
       cursor: pointer;
-      font-weight: bold;
-
-      &:hover {
-        @include gradient-text;
-      }
     }
 
-    img {
+    svg {
       height: 16px;
       width: 16px;
       margin-left: 8px;
@@ -71,10 +62,11 @@
     gap: 10px;
     margin-top: auto;
   }
+
+  .tag {
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
 }
 
-.tag {
-  border: 2px solid white;
-  border-radius: 5px;
-  padding: 2px 5px;
-}
+

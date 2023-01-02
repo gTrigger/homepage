@@ -1,0 +1,84 @@
+.theme-picker {
+  &__button {
+    span {
+      font-size: 28px;
+    }
+  }
+
+  &__menu {
+    background: transparent;
+    margin: 10px 20px;
+    z-index: 1;
+    transform: translateY(140%);
+    transition: all .5s;
+    display: flex;
+    gap: 15px;
+
+    @include mobile {
+      margin: 5px 20px;
+    }
+
+    &.active {
+      transform: translateY(0);
+    }
+  }
+
+  &__theme {
+    width: 60px;
+    height: 45px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 5px 0;
+
+    @include mobile {
+      width: 50px;
+      height: 30px;
+      font-size: $font-size-xxsmall;
+    }
+
+    .colors {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .primary, .secondary, .accent {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid rgba($color-grey, .5);
+
+      @include mobile {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    &.aurora {
+      .primary {
+        background: $color-black;
+      }
+
+      .secondary {
+        background: $color-white;
+      }
+
+      .accent {
+        background: $gradient-aurora;
+      }
+    }
+
+    &.sage {
+      .primary {
+        background: $color-milk;
+      }
+
+      .secondary {
+        background: $color-sage-darkest;
+      }
+
+      .accent {
+        background: $color-sage-dark;
+      }
+    }
+  }
+}

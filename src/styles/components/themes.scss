@@ -1,14 +1,293 @@
-body {
-  &.dark-theme {
-    background: $gradient-black;
-    color: white;
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One');
 
-    .app-header {
-      color: white;
+body {
+  &.aurora {
+    $font-name: 'Drugs';
+    $color-primary: $color-black;
+    $color-secondary: $color-white;
+    $background-pattern: url('/assets/images/graphics/stars.png') repeat;
+    $background-header: $gradient-header-black;
+    $background-footer: $gradient-footer-black;
+    $project-tile-background: $gradient-black;
+
+    @mixin scrollbar {
+      @include gradient-scrollbar;
     }
 
+    @mixin background-graphic {
+      @include graphic-background-stars;
+    }
+
+    @mixin background-graphic-mobile {
+      @include graphic-background-stars-mobile;
+    }
+
+    @mixin accent-border {
+      @include gradient-border;
+    }
+
+    @mixin accent-text {
+      @include gradient-text;
+    }
+
+    @include scrollbar;
+
+    background: $color-primary;
+    color: $color-secondary;
+    animation: theme-transition-dark .8s;
+
     a {
-      color: white;
+      color: $color-secondary;
+    }
+
+    .app-header {
+      background: $background-header;
+      height: 100px;
+      color: $color-secondary;
+
+      &__link {
+        &:hover, &:active, &:focus, &.active {
+          @include accent-text;
+        }
+      }
+    }
+
+    .app-footer {
+      background: $background-footer;
+      color: $color-secondary;
+
+      &__link {
+        &:hover, &:active, &:focus, &.active {
+          @include accent-text;
+        }
+      }
+    }
+
+    .background {
+      background: $background-pattern;
+    }
+
+    .homepage {
+      @include background-graphic;
+
+      @include mobile {
+        @include background-graphic-mobile;
+      }
+    }
+
+    .theme-picker {
+      &__theme {
+        color: $color-secondary;
+
+        &.aurora {
+          border: 1px solid rgba($color-grey, .5);
+        }
+      }
+    }
+
+    .about {
+      &__hello {
+        @include accent-text;
+      }
+
+      &__contacts-link {
+        @include accent-text;
+      }
+    }
+
+    .projects {
+      .project-tile {
+        @include accent-border;
+
+        background: $project-tile-background;
+        color: $color-secondary;
+
+        .link:hover {
+          @include accent-text;
+        }
+
+        .tag {
+          border: 2px solid white;
+        }
+      }
+    }
+
+    .contacts {
+      &__email {
+        @include accent-text;
+      }
+
+      &__tooltip {
+        background: rgba($color-primary, .8);
+        color: $color-secondary;
+        border: 1px solid rgba($color-grey, .5);
+      }
+
+      .social-logo {
+        @include accent-border;
+
+        background: $color-primary;
+      }
+    }
+  }
+
+  &.sage {
+    $font-name: 'Maleah';
+    $color-primary: $color-milk;
+    $color-secondary: $color-sage-darkest;
+    $color-accent: $color-sage;
+    $color-accent-light: $color-white;
+    $color-accent-dark: $color-sage-dark;
+
+    @mixin scrollbar {
+      @include sage-scrollbar;
+    }
+
+    @mixin background-graphic {
+      @include graphic-background-herbs;
+    }
+
+    @mixin background-graphic-mobile {
+      @include graphic-background-herbs-mobile;
+    }
+
+    @mixin accent-border {
+      @include accent-shadow;
+    }
+
+    @include scrollbar;
+
+    background: $color-primary;
+    color: $color-secondary;
+    animation: theme-transition-light .8s;
+
+    a {
+      color: $color-secondary;
+    }
+
+    .app-header {
+      @include shadow;
+
+      background: $color-primary;
+      color: $color-secondary;
+      height: 70px;
+
+      @include mobile {
+        height: 50px;
+      }
+
+      &__link {
+        &:before {
+          content: "";
+          background-color: transparent;
+          border-radius: 50%;
+          height: 0.5em;
+          width: 0.5em;
+          position: absolute;
+          left: -0.8em;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+
+        &:hover, &:active, &:focus {
+          &:before {
+            background-color: $color-accent;
+          }
+        }
+
+        &.active {
+          &:before {
+            background-color: $color-accent-dark;
+          }
+        }
+      }
+    }
+
+    .app-footer {
+      @include shadow;
+
+      background: $color-primary;
+      color: $color-secondary;
+
+      &__link {
+        &:hover, &:active, &:focus, &.active {
+          color: $color-accent-dark;
+        }
+      }
+    }
+
+    .homepage {
+      @include background-graphic;
+
+      @include mobile {
+        @include background-graphic-mobile;
+      }
+    }
+
+    .theme-picker {
+      &__theme {
+        color: $color-secondary;
+
+        &.sage {
+          border: 1px solid rgba($color-grey, .5);
+        }
+      }
+    }
+
+    .about {
+      &__hello {
+        color: $color-secondary;
+      }
+
+      &__contacts-link {
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    .projects {
+      .project-tile {
+        @include accent-border;
+
+        background: $color-primary;
+        color: $color-secondary;
+
+        &__links {
+          svg {
+            fill: $color-secondary;
+          }
+        }
+
+        .link:hover {
+          span {
+            border-bottom: 2px solid $color-accent;
+          }
+        }
+
+        .tag {
+          border: 0;
+          color: $color-accent-light;
+          background-color: $color-accent-dark;
+        }
+      }
+    }
+
+    .contacts {
+      &__email {
+        font-weight: $font-weight-bold;
+      }
+
+      &__tooltip {
+        background: rgba($color-primary, .8);
+        color: $color-secondary;
+        border: 1px solid rgba($color-grey, .5);
+      }
+
+      .social-logo {
+        @include accent-border;
+
+        background: $color-accent-dark;
+      }
     }
   }
 }

@@ -2,17 +2,13 @@ import { Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import {MenuItem} from 'store/reducer'
+import {ThemePicker} from "./ThemePicker";
 
 const Layout = () => {
     const dispatch = useDispatch();
-    const currentTheme = useSelector(state => state.currentTheme);
     const activeMenuItem = useSelector(state => state.activeMenuItem);
     const documentElement = document.documentElement;
     const body = document.body;
-
-    function setInitialTheme() {
-        document.body.classList.add(`${currentTheme}-theme`);
-    }
 
     function onScroll() {
         if (documentElement.scrollTop < documentElement.clientHeight * 0.7) {
@@ -33,7 +29,6 @@ const Layout = () => {
         const element = document.getElementsByClassName(elementClass)[0];
         dispatch({ type: `menu/changeActiveItem/${elementClass}` });
         element.scrollIntoView({ block: "start", behavior: "smooth" });
-        onScroll();
     };
 
     const changeActiveMenuItem = (menuItem) => {
@@ -43,7 +38,6 @@ const Layout = () => {
     };
 
     useEffect(() => {
-        setInitialTheme();
         onScroll();
         body.onscroll = () => onScroll();
     });
@@ -52,13 +46,16 @@ const Layout = () => {
         <>
             <div className="background"/>
             <header className="app-header">
-                <div className="app-header-link menu-about" onClick={() => scrollToElement(MenuItem.ABOUT)}>About</div>
-                <div className="app-header-link menu-projects" onClick={() => scrollToElement(MenuItem.PROJECTS)}>Projects</div>
-                <div className="app-header-link menu-contacts" onClick={() => scrollToElement(MenuItem.CONTACTS)}>Contacts</div>
+                <div className="app-header__link menu-about" onClick={() => scrollToElement(MenuItem.ABOUT)}>About</div>
+                <div className="app-header__link menu-projects" onClick={() => scrollToElement(MenuItem.PROJECTS)}>Projects</div>
+                <div className="app-header__link menu-contacts" onClick={() => scrollToElement(MenuItem.CONTACTS)}>Contacts</div>
             </header>
             <main className="app-container">
                 <Outlet />
             </main>
+            <footer className="app-footer">
+                <ThemePicker/>
+            </footer>
         </>
     );
 }

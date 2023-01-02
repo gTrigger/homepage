@@ -22,15 +22,15 @@
     "title": "Portfolio",
     "class": "portfolio",
     "description": "My own portfolio website \uD83D\uDC49\uD83D\uDC48 Built using React as a practice project during learning process.",
-    "url": "https://gtrigger-weather-forecast.netlify.app/",
-    "github": "https://github.com/gTrigger/WeatherForecast",
+    "url": "https:/gtrigger.netlify.app/",
+    "github": "https://github.com/gTrigger/homepage",
     "technologies": ["React", "JavaScript"]
   },
   {
     "id": "4",
     "title": "Weather forecast",
     "class": "forecast",
-    "description": "Small project to check weather in any city around the world. Built using Vuetify.",
+    "description": "Small open-source project to check weather forecast for any city. Built using Vuetify component library. Uses Openweathermap open API.",
     "url": "https://gtrigger-weather-forecast.netlify.app/",
     "github": "https://github.com/gTrigger/WeatherForecast",
     "technologies": ["Vue", "TypeScript", "Vuetify"]
@@ -39,7 +39,7 @@
     "id": "5",
     "title": "Github Userboard",
     "class": "userboard",
-    "description": "Top github users list. Built using Github open API.",
+    "description": "Small open-source project to represent top github users and their repositories' details. Supports search for a specific user. Uses Github open API.",
     "url": "https://gtrigger-github-userboard.netlify.app/",
     "github": "https://github.com/gTrigger/GithubUserboard",
     "technologies": ["Vue", "JavaScript"]
@@ -75,9 +75,9 @@
     "id": "9",
     "title": "Puma",
     "class": "puma",
-    "description": "Network access control system which provides control of workstation traffic.",
+    "description": "Network access control system. Provides control of workstation traffic. Built using Vuetify component library.",
     "url": null,
     "github": null,
-    "technologies": ["Vue", "JavaScript", "WebSockets"]
+    "technologies": ["Vue", "JavaScript", "Vuetify", "WebSockets"]
   }
 ]

@@ -1,6 +1,6 @@
 export const Theme = {
-    DARK: 'dark',
-    LIGHT: 'light',
+    AURORA: 'aurora',
+    SAGE: 'sage',
 }
 
 export const MenuItem = {
@@ -10,18 +10,18 @@ export const MenuItem = {
 }
 
 const InitialState = {
-    currentTheme: Theme.DARK,
+    currentTheme: Theme.AURORA,
     activeMenuItem: MenuItem.ABOUT,
 }
 
 const reducer = (state = InitialState, action) => {
     switch (action.type) {
-        case 'theme/changeTheme/dark': {
-            return { ...state, currentTheme: Theme.DARK };
+        case 'theme/changeTheme/aurora': {
+            return { ...state, currentTheme: Theme.AURORA };
         }
 
-        case 'theme/changeTheme/light': {
-            return { ...state, currentTheme: Theme.LIGHT };
+        case 'theme/changeTheme/sage': {
+            return { ...state, currentTheme: Theme.SAGE };
         }
 
         case 'menu/changeActiveItem/about': {
