@@ -36,9 +36,9 @@ const ThemePicker = () => {
                     themes.length > 0 && themes.map((theme, index) => (
                         <div className={"theme-picker__theme " + theme} key={index} onClick={() => setTheme(theme)}>
                             <div className="colors">
-                                <div className="primary"/>
-                                <div className="secondary"/>
-                                <div className="accent"/>
+                                <div className="color primary"/>
+                                <div className="color secondary"/>
+                                <div className="color accent"/>
                             </div>
 
                             <span>{theme}</span>

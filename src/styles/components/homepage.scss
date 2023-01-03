@@ -1,10 +1,14 @@
 .homepage {
-  &-section {
+  &__section {
     min-height: 100vh;
-    margin: auto 12vw;
+    margin: 0 12vw;
+
+    @include tablet {
+      margin: 0 12vw;
+    }
 
     @include mobile {
-      margin: auto 0;
+      margin: 0 15px;
     }
   }
 }

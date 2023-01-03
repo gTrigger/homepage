@@ -11,7 +11,7 @@ const About = () => {
     };
 
     return (
-        <div className="about homepage-section">
+        <div className="about homepage__section">
             <p className="about__hello">
                 Hey!
             </p>

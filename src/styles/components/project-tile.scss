@@ -1,0 +1,55 @@
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  width: 300px;
+  min-height: 350px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  border-width: 2px;
+  font-size: $font-size-xsmall;
+
+  &__title {
+    height: auto;
+    margin-bottom: 20px;
+    font-weight: $font-weight-bold;
+  }
+
+  &__description {
+    margin-bottom: 20px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+
+    .link {
+      cursor: pointer;
+    }
+
+    svg {
+      height: 16px;
+      width: 16px;
+      margin-left: 8px;
+      vertical-align: text-top;
+    }
+  }
+
+  &__technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+
+    .tag {
+      border-radius: 5px;
+      padding: 2px 5px;
+    }
+  }
+}
+
+

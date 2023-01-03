@@ -1,0 +1,23 @@
+//$viewport-tablet: 768px;
+//$viewport-desktop: 1200px;
+$viewport-tablet: 640px;
+$viewport-desktop: 1200px;
+$viewport-ultrawide: 1800px;
+
+@mixin mobile {
+  @media only screen and (max-width: $viewport-tablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $viewport-tablet) and (max-width: $viewport-desktop) {
+    @content;
+  }
+}
+
+@mixin landscape-mobile {
+  @media only screen and (max-height: $viewport-tablet) and (orientation: landscape) {
+    @content;
+  }
+}

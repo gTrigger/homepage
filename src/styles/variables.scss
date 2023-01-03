@@ -1,0 +1,110 @@
+// Typography
+
+$font-size-xlarge: 1.5em;
+$font-size-large: 1.4em;
+$font-size: 1.3em;
+$font-size-small: 1.2em;
+$font-size-xsmall: 1.1em;
+$font-size-xxsmall: .9em;
+$font-size-xxxsmall: .8em;
+
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+
+$line-height-large: 1.4em;
+
+
+// Colors
+
+$color-black: #000000;
+$color-grey-dark: #202020;
+$color-grey: #969696;
+$color-white: #ffffff;
+$color-milk: #e8eae6;
+$color-sage: #99a799;
+$color-sage-dark: #7c9473;
+$color-sage-darkest: #434e43;
+
+$color-aurora-purple: #a166ab;
+$color-aurora-indigo: #6c44fc;
+$color-aurora-blue: #14b9d6;
+$color-aurora-turquoise: #00c48e;
+$color-aurora-green: #52ff84;
+
+$color-aurora-purple-light: #f6c5ff;
+$color-aurora-indigo-light: #b8a5ff;
+$color-aurora-blue-light: #8aecff;
+$color-aurora-turquoise-light: #7affd9;
+$color-aurora-green-light: #7fffa3;
+
+$gradient-aurora: linear-gradient(
+                60deg,
+                $color-aurora-purple,
+                $color-aurora-indigo,
+                $color-aurora-blue,
+                $color-aurora-turquoise,
+                $color-aurora-green
+);
+
+$gradient-aurora-light: linear-gradient(
+                60deg,
+                $color-aurora-purple-light,
+                $color-aurora-indigo-light,
+                $color-aurora-blue-light,
+                $color-aurora-turquoise-light,
+                $color-aurora-green-light
+);
+
+$gradient-black: linear-gradient(
+                135deg,
+                rgba($color-grey-dark, 1) 0%,
+                rgba($color-black, 1) 40%
+);
+
+$gradient-header-black: linear-gradient(
+                to bottom,
+                rgba($color-black, 1) 0%,
+                rgba($color-black, 0.9) 30%,
+                rgba($color-black, 0) 100%
+);
+
+$gradient-footer-black: linear-gradient(to top,
+                rgba($color-black, 1) 0%,
+                rgba($color-black, 0.9) 30%,
+                rgba($color-black, 0) 100%
+);
+
+
+// Transitions
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes theme-transition-dark {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes theme-transition-light {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -61,22 +61,22 @@
     gap: 20px;
     height: auto;
     margin-top: 20px;
-  }
-}
 
-.social-logo {
-  height: 60px;
-  width: 60px;
-  box-sizing: border-box;
-  border-width: 2px;
-  border-radius: 10px;
-  padding: 10px;
-  position: relative;
-  cursor: pointer;
+    .social-logo {
+      height: 60px;
+      width: 60px;
+      box-sizing: border-box;
+      border-width: 2px;
+      border-radius: 10px;
+      padding: 10px;
+      position: relative;
+      cursor: pointer;
 
-  @include mobile {
-    height: 50px;
-    width: 50px;
-    padding: 5px;
+      @include mobile {
+        height: 50px;
+        width: 50px;
+        padding: 5px;
+      }
+    }
   }
 }

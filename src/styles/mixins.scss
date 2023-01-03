@@ -1,0 +1,230 @@
+@mixin gradient-text {
+  background: $gradient-aurora-light;
+  background-size: 300% 300%;
+  animation: animatedgradient 5s ease alternate infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: $font-weight-bold;
+}
+
+@mixin gradient-border {
+  &:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border-radius: 10px;
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    background: white;
+    z-index: -1;
+  }
+
+  &:hover {
+    &:after {
+      background: $gradient-aurora;
+      animation: animatedgradient 5s ease alternate infinite;
+      background-size: 300% 300%;
+    }
+  }
+}
+
+@mixin gradient-scrollbar {
+  &::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background: rgba($color-grey-dark, 1);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $gradient-aurora;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: 0 0 0 100000vh rgba($color-grey-dark, 1);
+  }
+}
+
+@mixin sage-scrollbar {
+  &::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background: rgba($color-sage-dark, 1);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $color-sage-dark;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: 0 0 0 100000vh rgba($color-white, 1);
+  }
+}
+
+@mixin shadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
+
+@mixin accent-shadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+
+  &:hover {
+    box-shadow: rgba(99, 99, 99, 0.4) 0 4px 12px 0;
+  }
+}
+
+@mixin accent-dot-sage {
+  &:before {
+    content: "";
+    background-color: transparent;
+    border-radius: 50%;
+    height: 0.5em;
+    width: 0.5em;
+    position: absolute;
+    left: -0.8em;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &:hover, &:active, &:focus {
+    &:before {
+      background-color: $color-sage;
+    }
+  }
+
+  &.active {
+    &:before {
+      background-color: $color-sage-dark;
+    }
+  }
+}
+
+$moth: url('/assets/images/graphics/moth.png');
+$crystals: url('/assets/images/graphics/crystals.png');
+$dragonfly: url('/assets/images/graphics/dragonfly.png');
+
+$moth-position: top 5vh right 2vw;
+$crystals-position: top 75vh left 2vw;
+$dragonfly-position: bottom 20vh center;
+
+$moth-size: 250px auto;
+$crystals-size: 200px auto;
+$dragonfly-size: 300px auto;
+
+@mixin graphic-background-stars {
+  background-image:
+          $moth,
+          $crystals,
+          $dragonfly;
+  background-position:
+          $moth-position,
+          $crystals-position,
+          $dragonfly-position;
+  background-size:
+          $moth-size,
+          $crystals-size,
+          $dragonfly-size;
+  background-repeat: no-repeat;
+}
+
+$moth-position-tablet: top 5vh right;
+$crystals-position-tablet: top 80vh left;
+$dragonfly-position-tablet: bottom 18vh center;
+
+$moth-size-tablet: 180px auto;
+$crystals-size-tablet: 150px auto;
+$dragonfly-size-tablet: 220px auto;
+
+@mixin graphic-background-stars-tablet {
+  background-image:
+          $moth,
+          $crystals,
+          $dragonfly;
+  background-position:
+          $moth-position-tablet,
+          $crystals-position-tablet,
+          $dragonfly-position-tablet;
+  background-size:
+          $moth-size-tablet,
+          $crystals-size-tablet,
+          $dragonfly-size-tablet;
+  background-repeat: no-repeat;
+}
+
+$dragonfly-position-mobile: bottom 18vh center;
+
+$dragonfly-size-mobile: 220px auto;
+
+@mixin graphic-background-stars-mobile {
+  background-image: $dragonfly;
+  background-position: $dragonfly-position-mobile;
+  background-size: $dragonfly-size-mobile;
+  background-repeat: no-repeat;
+}
+
+$buckthorn: url('/assets/images/graphics/buckthorn.png');
+$sage: url('/assets/images/graphics/sage.png');
+$olive: url('/assets/images/graphics/olive.png');
+
+$buckthorn-position: top 10vh right 3vw;
+$sage-position: top 62vh left 4vw;
+$olive-position: bottom 25vh center;
+
+$buckthorn-size: 300px auto;
+$sage-size: 130px auto;
+$olive-size: 220px auto;
+
+@mixin graphic-background-herbs {
+  background-image:
+          $buckthorn,
+          $sage,
+          $olive;
+  background-position:
+          $buckthorn-position,
+          $sage-position,
+          $olive-position;
+  background-size:
+          $buckthorn-size,
+          $sage-size,
+          $olive-size;
+  background-repeat: no-repeat;
+}
+
+$buckthorn-position-tablet: top 10vh right 2vw;
+$sage-position-tablet: top 70vh left 4vw;
+$olive-position-tablet: bottom 25vh center;
+
+$buckthorn-size-tablet: 220px auto;
+$sage-size-tablet: 100px auto;
+$olive-size-tablet: 180px auto;
+
+@mixin graphic-background-herbs-tablet {
+  background-image:
+          $buckthorn,
+          $sage,
+          $olive;
+  background-position:
+          $buckthorn-position-tablet,
+          $sage-position-tablet,
+          $olive-position-tablet;
+  background-size:
+          $buckthorn-size-tablet,
+          $sage-size-tablet,
+          $olive-size-tablet;
+  background-repeat: no-repeat;
+}
+
+$olive-position-mobile: bottom 25vh center;
+
+$olive-size-mobile: 180px auto;
+
+@mixin graphic-background-herbs-mobile {
+  background-image: $olive;
+  background-position: $olive-position-mobile;
+  background-size: $olive-size-mobile;
+  background-repeat: no-repeat;
+}

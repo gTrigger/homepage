@@ -18,6 +18,10 @@ body {
       @include graphic-background-stars;
     }
 
+    @mixin background-graphic-tablet {
+      @include graphic-background-stars-tablet;
+    }
+
     @mixin background-graphic-mobile {
       @include graphic-background-stars-mobile;
     }
@@ -74,6 +78,10 @@ body {
         @include background-graphic-mobile;
       }
 
+      @include tablet {
+        @include background-graphic-tablet;
+      }
+
       @include landscape-mobile {
         background-image: none;
       }
@@ -127,10 +135,12 @@ body {
         border: 1px solid rgba($color-grey, .5);
       }
 
-      .social-logo {
-        @include accent-border;
+      &__socials {
+        .social-logo {
+          @include accent-border;
 
-        background: $color-primary;
+          background: $color-primary;
+        }
       }
     }
   }
@@ -151,12 +161,20 @@ body {
       @include graphic-background-herbs;
     }
 
+    @mixin background-graphic-tablet {
+      @include graphic-background-herbs-tablet;
+    }
+
     @mixin background-graphic-mobile {
       @include graphic-background-herbs-mobile;
     }
 
     @mixin accent-border {
       @include accent-shadow;
+    }
+
+    @mixin accent-text {
+      @include accent-dot-sage;
     }
 
     @include scrollbar;
@@ -181,30 +199,7 @@ body {
       }
 
       &__link {
-        &:before {
-          content: "";
-          background-color: transparent;
-          border-radius: 50%;
-          height: 0.5em;
-          width: 0.5em;
-          position: absolute;
-          left: -0.8em;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-        }
-
-        &:hover, &:active, &:focus {
-          &:before {
-            background-color: $color-accent;
-          }
-        }
-
-        &.active {
-          &:before {
-            background-color: $color-accent-dark;
-          }
-        }
+        @include accent-text;
       }
     }
 
@@ -226,6 +221,10 @@ body {
 
       @include mobile {
         @include background-graphic-mobile;
+      }
+
+      @include tablet {
+        @include background-graphic-tablet;
       }
 
       @include landscape-mobile {

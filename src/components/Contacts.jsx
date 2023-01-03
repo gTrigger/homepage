@@ -14,7 +14,7 @@ const Contacts = () => {
     }
 
     return (
-        <div className="contacts homepage-section">
+        <div className="contacts homepage__section">
             <p className="contacts__text">
                 Let's be in touch!
             </p>

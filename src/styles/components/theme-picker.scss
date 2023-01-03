@@ -39,17 +39,17 @@
     .colors {
       display: flex;
       justify-content: space-around;
-    }
 
-    .primary, .secondary, .accent {
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      border: 1px solid rgba($color-grey, .5);
+      .color {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 1px solid rgba($color-grey, .5);
 
-      @include mobile {
-        width: 10px;
-        height: 10px;
+        @include mobile {
+          width: 10px;
+          height: 10px;
+        }
       }
     }
 

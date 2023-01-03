@@ -6,13 +6,18 @@
   font-size: $font-size-large;
   line-height: $line-height-large;
 
-  &__contacts-link {
-    cursor: pointer;
+  @include mobile {
+    justify-content: normal;
+    padding-top: 50px;
+    font-size: $font-size-small;
   }
 
-  @include mobile {
-    margin: 50px 15px;
-    font-size: $font-size-small;
+  @include landscape-mobile {
+    padding-top: 50px;
+  }
+
+  &__contacts-link {
+    cursor: pointer;
   }
 }
 

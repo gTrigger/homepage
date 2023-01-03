@@ -5,7 +5,7 @@ const Projects = () => {
     const projects = getProjects();
 
     return (
-        <div className="projects homepage-section">
+        <div className="projects homepage__section">
             <div className="projects__list">
                 {
                     projects.length > 0 && projects.map(project => (
