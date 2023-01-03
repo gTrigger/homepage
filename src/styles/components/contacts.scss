@@ -3,6 +3,10 @@
   flex-direction: column;
   font-size: $font-size-large;
 
+  @include mobile {
+    font-size: $font-size-small;
+  }
+
   &__text {
     margin: 20px 0;
     text-align: center;

@@ -15,7 +15,8 @@
   }
 
   @include mobile {
-    justify-content: center;
+    margin-top: 5vh;
+    font-size: $font-size-small;
   }
 }
 
