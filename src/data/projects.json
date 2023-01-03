@@ -22,7 +22,7 @@
     "title": "Portfolio",
     "class": "portfolio",
     "description": "My own portfolio website \uD83D\uDC49\uD83D\uDC48 Built using React as a practice project during learning process.",
-    "url": "https:/gtrigger.netlify.app/",
+    "url": "https://gtrigger.netlify.app/",
     "github": "https://github.com/gTrigger/homepage",
     "technologies": ["React", "JavaScript"]
   },

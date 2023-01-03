@@ -10,12 +10,8 @@
     cursor: pointer;
   }
 
-  @include tablet {
-    justify-content: center;
-  }
-
   @include mobile {
-    margin-top: 5vh;
+    margin-top: 20px;
     font-size: $font-size-small;
   }
 }

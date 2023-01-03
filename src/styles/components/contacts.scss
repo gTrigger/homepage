@@ -74,8 +74,9 @@
   position: relative;
   cursor: pointer;
 
-  img {
-    height: 40px;
-    width: 40px;
+  @include mobile {
+    height: 50px;
+    width: 50px;
+    padding: 5px;
   }
 }
