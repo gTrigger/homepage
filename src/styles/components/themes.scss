@@ -73,6 +73,10 @@ body {
       @include mobile {
         @include background-graphic-mobile;
       }
+
+      @include landscape-mobile {
+        background-image: none;
+      }
     }
 
     .theme-picker {
@@ -222,6 +226,10 @@ body {
 
       @include mobile {
         @include background-graphic-mobile;
+      }
+
+      @include landscape-mobile {
+        background-image: none;
       }
     }
 

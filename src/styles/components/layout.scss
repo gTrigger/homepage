@@ -4,7 +4,7 @@ body {
 
   #root {
     display: flex;
-    min-width: 400px;
+    min-width: 300px;
     flex-direction: column;
   }
 
@@ -28,9 +28,10 @@ body {
 
     @include mobile {
       justify-content: center;
+      font-size: $font-size-xsmall;
 
       &__link {
-        margin: 12px;
+        margin: 15px 10px;
       }
     }
   }

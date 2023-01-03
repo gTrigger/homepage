@@ -259,13 +259,19 @@ $olive-size-mobile: 180px auto;
 }
 
 @mixin mobile {
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media screen and (min-width: 750px) and (max-width: 1200px) {
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin landscape-mobile {
+  @media screen and (max-height: 768px) and (orientation: landscape) {
     @content;
   }
 }
